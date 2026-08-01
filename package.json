@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "pannellum": "^2.5.7"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"bun run dev:css\"",
+    "dev:css": "bunx @tailwindcss/cli -i ./css/input.css -o ./dist/output.css --watch",
+    "build": "bunx @tailwindcss/cli -i ./css/input.css -o ./dist/output.css && vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.4",
+    "daisyui": "^5.7.9",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.0"
+  }
+}

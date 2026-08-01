@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Virtual Guide 360</title>
+
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <link rel="stylesheet" href="/pannellum/pannellum.css" />
+  </head>
+
+  <body class="bg-base-200">
+    <main class="py-10">
+      <section class="mx-auto max-w-6xl px-4">
+        <!-- Heading -->
+        <div class="mb-6">
+          <div class="badge badge-primary mb-3">Virtual Guide</div>
+
+          <h1 class="text-3xl font-bold sm:text-4xl bg-green-500 px-5 py-2 rounded-3xl">Jelajahi Kampus Saya</h1>
+
+          <p class="mt-2 text-base-content/70">
+            Jelajahi lingkungan kampus melalui panorama 360 derajat secara
+            interaktif.
+          </p>
+        </div>
+
+        <!-- Panorama -->
+        <div
+          class="overflow-hidden rounded-2xl border border-base-300 bg-base-100 shadow-xl"
+        >
+          <div class="h-[400px] w-full sm:h-[500px] lg:h-[600px]">
+            <div id="panorama" class="h-full w-full"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/pannellum/pannellum.js"></script>
+
+    <script type="module" src="./js/virtual-guide.js"></script>
+  </body>
+</html>
