@@ -20,7 +20,7 @@ const scenes = {
 
     type: "equirectangular",
 
-    panorama: "/assets/360/lobby/panorama.jpg",
+    panorama: "/assets/360/lobby/panorama.jpeg",
 
     pitch: 0,
 
