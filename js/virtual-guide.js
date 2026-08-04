@@ -9,9 +9,7 @@ function createNavigationHotspot(hotSpotDiv, args) {
 }
 
 const scenes = {
-  // ==================================================
   // LOBBY
-  // ==================================================
 
   lobby: {
     title: "Lobby Kampus",
@@ -42,7 +40,6 @@ const scenes = {
         //custom pitch nya
         // cssClass: "campus-hotspot",
         // createTooltipFunc: createNavigationHotspot,
-
       },
 
       {
@@ -58,9 +55,7 @@ const scenes = {
     ],
   },
 
-  // ==================================================
   // LABORATORY
-  // ==================================================
 
   laboratory: {
     title: "Laboratorium Komputer",
@@ -102,9 +97,7 @@ const scenes = {
     ],
   },
 
-  // ==================================================
   // LIBRARY
-  // ==================================================
 
   library: {
     title: "Perpustakaan",
@@ -135,9 +128,7 @@ const scenes = {
     ],
   },
 
-  // ==================================================
   // AUDITORIUM
-  // ==================================================
 
   auditorium: {
     title: "Auditorium",
@@ -169,9 +160,7 @@ const scenes = {
   },
 };
 
-// ==================================================
 // PANNELLUM
-// ==================================================
 
 const viewer = pannellum.viewer("panorama", {
   default: {
@@ -193,9 +182,7 @@ const viewer = pannellum.viewer("panorama", {
   scenes,
 });
 
-// ==================================================
 // DEBUG
-// ==================================================
 
 viewer.on("load", () => {
   console.log("Panorama berhasil dimuat");
