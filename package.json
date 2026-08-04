@@ -4,8 +4,8 @@
   },
   "scripts": {
     "dev": "concurrently -k \"vite\" \"npm run dev:css\"",
-    "dev:css": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./css/input.css -o ./css/output.css && vite build"
+    "dev:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "build": " npx tailwindcss -i ./css/input.css -o ./css/output.css && vite build"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
