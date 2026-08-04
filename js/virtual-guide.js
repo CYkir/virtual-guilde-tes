@@ -1,4 +1,3 @@
-
 console.log("Virtual Guide 360");
 // CUSTOM HOTSPOT
 
@@ -108,6 +107,26 @@ const scenes = {
           text: "Masuk Kampus",
         },
       },
+
+      {
+        pitch: 5.28048741746657,
+
+        yaw: -120.28314240407715,
+
+        type: "scene",
+
+        text: "Belakang",
+
+        sceneId: "belakang",
+
+        // cssClass: "campus-navigation-hotspot",
+
+        // createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Belakang",
+        },
+      },
     ],
   },
 
@@ -130,9 +149,9 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: -5,
+        pitch: 6.894056709961352,
 
-        yaw: 180,
+        yaw: -4.464844021044616,
 
         type: "scene",
 
@@ -153,14 +172,14 @@ const scenes = {
 
   // AUDITORIUM
 
-  auditorium: {
-    title: "Auditorium",
+  belakang: {
+    title: "belakang",
 
     author: "Virtual Guide",
 
     type: "equirectangular",
 
-    panorama: "./assets/360/auditorium/panorama.jpg",
+    panorama: "./assets/360/belakang/panorama.jpg",
 
     pitch: 0,
 
@@ -170,22 +189,22 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: -5,
+        pitch: 17.118556009882905,
 
-        yaw: 180,
+        yaw: 73.67051933243152,
 
         type: "scene",
 
-        text: "Laboratorium",
+        text: "Kembali ke Lobby",
 
-        sceneId: "laboratory",
+        sceneId: "lobby",
 
         // cssClass: "campus-navigation-hotspot",
 
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Laboratorium",
+          text: "Kembali ke Lobby",
         },
       },
     ],
