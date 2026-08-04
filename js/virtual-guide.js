@@ -41,9 +41,9 @@ const scenes = {
 
         sceneId: "laboratory",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Laboratorium Komputer",
@@ -61,9 +61,9 @@ const scenes = {
 
         sceneId: "library",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Perpustakaan",
@@ -101,9 +101,9 @@ const scenes = {
 
         sceneId: "lobby",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Kembali ke Lobby",
@@ -121,9 +121,9 @@ const scenes = {
 
         sceneId: "auditorium",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Auditorium",
@@ -161,9 +161,9 @@ const scenes = {
 
         sceneId: "lobby",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Kembali ke Lobby",
@@ -201,9 +201,9 @@ const scenes = {
 
         sceneId: "laboratory",
 
-        cssClass: "campus-navigation-hotspot",
+        // cssClass: "campus-navigation-hotspot",
 
-        createTooltipFunc: createNavigationHotspot,
+        // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
           text: "Laboratorium",
@@ -238,7 +238,7 @@ const viewer = pannellum.viewer("panorama", {
 // DEBUG
 
 viewer.on("load", () => {
-  console.log("✅ Panorama berhasil dimuat");
+  console.log("Panorama berhasil dimuat");
 
   console.log("Scene:", viewer.getScene());
 });
@@ -248,5 +248,5 @@ viewer.on("scenechange", (sceneId) => {
 });
 
 viewer.on("error", (error) => {
-  console.error("❌ Pannellum Error:", error);
+  console.error("Pannellum Error:", error);
 });
