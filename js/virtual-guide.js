@@ -14,8 +14,47 @@ function createNavigationHotspot(hotSpotDiv, args) {
 const scenes = {
   // LOBBY
 
-  lobby: {
-    title: "Lobby Kampus",
+  halaman: {
+    title: "halaman Depan",
+
+    author: "Virtual Guide",
+
+    type: "equirectangular",
+
+    panorama: "./assets/360/halaman/panorama.jpeg",
+
+    pitch: 0,
+
+    yaw: 0,
+
+    hfov: 100,
+
+    hotSpots: [
+      {
+        pitch: 11.48989556487606,
+        yaw: -16.995300920041956,
+
+        type: "scene",
+
+        text: "Lobby",
+
+        sceneId: "lobi",
+
+        // cssClass: "campus-navigation-hotspot",
+
+        // createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Laboratorium Komputer",
+        },
+      },
+    ],
+  },
+
+  // LABORATORY
+
+  lobi: {
+    title: "Lobi Mall",
 
     author: "Virtual Guide",
 
@@ -31,117 +70,57 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: -18.39125533507745,
+        pitch: 19.964816817651034,
 
-        yaw: 45,
+        yaw: 62.302991360436074,
 
         type: "scene",
 
-        text: "Laboratorium Komputer",
+        text: "Keluar ke Halaman",
 
-        sceneId: "laboratory",
+        sceneId: "halaman",
 
         // cssClass: "campus-navigation-hotspot",
 
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Laboratorium Komputer",
+          text: "Keluar ke Halaman",
         },
       },
 
       {
-        pitch: -5,
+        pitch: 16.3510905085903,
 
-        yaw: -90,
+        yaw: 140.46785815145353,
 
         type: "scene",
 
-        text: "Perpustakaan",
+        text: "Masuk Kampus",
 
-        sceneId: "library",
+        sceneId: "masuk",
 
         // cssClass: "campus-navigation-hotspot",
 
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Perpustakaan",
+          text: "Masuk Kampus",
         },
       },
     ],
   },
 
-  // LABORATORY
+  // Masuk
 
-  laboratory: {
-    title: "Laboratorium Komputer",
-
-    author: "Virtual Guide",
-
-    type: "equirectangular",
-
-    panorama: "./assets/360/laboratory/panorama.jpg",
-
-    pitch: 0,
-
-    yaw: 0,
-
-    hfov: 100,
-
-    hotSpots: [
-      {
-        pitch: -5,
-
-        yaw: 180,
-
-        type: "scene",
-
-        text: "Kembali ke Lobby",
-
-        sceneId: "lobby",
-
-        // cssClass: "campus-navigation-hotspot",
-
-        // createTooltipFunc: createNavigationHotspot,
-
-        createTooltipArgs: {
-          text: "Kembali ke Lobby",
-        },
-      },
-
-      {
-        pitch: -5,
-
-        yaw: 45,
-
-        type: "scene",
-
-        text: "Auditorium",
-
-        sceneId: "auditorium",
-
-        // cssClass: "campus-navigation-hotspot",
-
-        // createTooltipFunc: createNavigationHotspot,
-
-        createTooltipArgs: {
-          text: "Auditorium",
-        },
-      },
-    ],
-  },
-
-  // LIBRARY
-
-  library: {
-    title: "Perpustakaan",
+  masuk: {
+    title: "Masuk",
 
     author: "Virtual Guide",
 
     type: "equirectangular",
 
-    panorama: "./assets/360/library/panorama.jpg",
+    panorama: "./assets/360/masuk/panorama.jpg",
 
     pitch: 0,
 
@@ -217,7 +196,7 @@ const scenes = {
 
 const viewer = pannellum.viewer("panorama", {
   default: {
-    firstScene: "lobby",
+    firstScene: "halaman",
 
     sceneFadeDuration: 800,
 
