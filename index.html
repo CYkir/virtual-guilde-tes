@@ -1,45 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <title>Virtual Guide 360</title>
 
-    <link rel="stylesheet" href="./css/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="/pannellum/pannellum.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./public/pannellum/pannellum.css"
+    />
+
+    <style>
+      .campus-navigation-hotspot {
+        width: 52px;
+        height: 52px;
+
+        border-radius: 9999px;
+
+        background: rgba(255, 255, 255, 0.95);
+
+        box-shadow:
+          0 4px 15px rgba(0, 0, 0, 0.25),
+          0 0 0 4px rgba(255, 255, 255, 0.25);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .campus-navigation-hotspot:hover {
+        transform: scale(1.15);
+        background: white;
+      }
+
+      .campus-navigation-hotspot::before {
+        content: "↑";
+
+        font-size: 26px;
+        font-weight: bold;
+
+        color: #4f46e5;
+      }
+    </style>
   </head>
 
   <body class="bg-base-200">
-    <main class="py-10">
-      <section class="mx-auto max-w-6xl px-4">
-        <!-- Heading -->
-        <div class="mb-6">
-          <div class="badge badge-primary mb-3">Virtual Guide</div>
 
-          <h1 class="text-3xl font-bold sm:text-4xl">Jelajahi Kampus Saya</h1>
+    <main>
+      <section class="py-12 sm:py-16 lg:py-20">
 
-          <p class="mt-2 text-base-content/70">
-            Jelajahi lingkungan kampus melalui panorama 360 derajat secara
-            interaktif.
-          </p>
-        </div>
-
-        <!-- Panorama -->
         <div
-          class="overflow-hidden rounded-2xl border border-base-300 bg-base-100 shadow-xl"
+          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
-          <div class="h-[400px] w-full sm:h-[500px] lg:h-[600px]">
-            <div id="panorama" class="h-full w-full"></div>
+
+          <div class="mb-6 max-w-2xl">
+
+            <div class="badge badge-primary mb-3">
+              Virtual Guide 360
+            </div>
+
+            <h1
+              class="text-3xl font-bold sm:text-4xl"
+            >
+              Jelajahi Kampus Saya
+            </h1>
+
+            <p
+              class="mt-2 text-base-content/70"
+            >
+              Jelajahi lingkungan kampus melalui
+              panorama 360 derajat secara interaktif.
+            </p>
+
           </div>
+          <div
+            class="overflow-hidden rounded-2xl
+                   border border-base-300
+                   bg-base-100 shadow-xl"
+          >
+
+            <div
+              id="panorama"
+              class="h-[400px] w-full
+                     sm:h-[500px]
+                     lg:h-[600px]"
+            ></div>
+
+          </div>
+
         </div>
+
       </section>
     </main>
 
-    <script src="/pannellum/pannellum.js"></script>
 
-    <script type="module" src="./js/virtual-guide.js"></script>
+    <script src="./public/pannellum/pannellum.js"></script>
+
+    <script src="./js/virtual-guide.js"></script>
+
   </body>
 </html>

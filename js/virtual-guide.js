@@ -1,12 +1,15 @@
+
+console.log("Virtual Guide 360");
+// CUSTOM HOTSPOT
+
 function createNavigationHotspot(hotSpotDiv, args) {
   hotSpotDiv.classList.add("campus-navigation-hotspot");
 
-  const icon = document.createElement("div");
-
-  // icon.innerHTML = "↑";
-
-  hotSpotDiv.appendChild(icon);
+  // Tooltip
+  hotSpotDiv.title = args.text || "Pindah lokasi";
 }
+
+// SCENES
 
 const scenes = {
   // LOBBY
@@ -18,7 +21,7 @@ const scenes = {
 
     type: "equirectangular",
 
-    panorama: "/assets/360/lobby/panorama.jpg",
+    panorama: "./assets/360/lobby/panorama.jpg",
 
     pitch: 0,
 
@@ -29,6 +32,7 @@ const scenes = {
     hotSpots: [
       {
         pitch: -18.39125533507745,
+
         yaw: 45,
 
         type: "scene",
@@ -37,13 +41,18 @@ const scenes = {
 
         sceneId: "laboratory",
 
-        //custom pitch nya
-        // cssClass: "campus-hotspot",
-        // createTooltipFunc: createNavigationHotspot,
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Laboratorium Komputer",
+        },
       },
 
       {
         pitch: -5,
+
         yaw: -90,
 
         type: "scene",
@@ -51,6 +60,14 @@ const scenes = {
         text: "Perpustakaan",
 
         sceneId: "library",
+
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Perpustakaan",
+        },
       },
     ],
   },
@@ -64,7 +81,7 @@ const scenes = {
 
     type: "equirectangular",
 
-    panorama: "/assets/360/laboratory/panorama.jpg",
+    panorama: "./assets/360/laboratory/panorama.jpg",
 
     pitch: 0,
 
@@ -75,6 +92,7 @@ const scenes = {
     hotSpots: [
       {
         pitch: -5,
+
         yaw: 180,
 
         type: "scene",
@@ -82,10 +100,19 @@ const scenes = {
         text: "Kembali ke Lobby",
 
         sceneId: "lobby",
+
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Kembali ke Lobby",
+        },
       },
 
       {
         pitch: -5,
+
         yaw: 45,
 
         type: "scene",
@@ -93,6 +120,14 @@ const scenes = {
         text: "Auditorium",
 
         sceneId: "auditorium",
+
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Auditorium",
+        },
       },
     ],
   },
@@ -106,7 +141,7 @@ const scenes = {
 
     type: "equirectangular",
 
-    panorama: "/assets/360/library/panorama.jpg",
+    panorama: "./assets/360/library/panorama.jpg",
 
     pitch: 0,
 
@@ -117,6 +152,7 @@ const scenes = {
     hotSpots: [
       {
         pitch: -5,
+
         yaw: 180,
 
         type: "scene",
@@ -124,6 +160,14 @@ const scenes = {
         text: "Kembali ke Lobby",
 
         sceneId: "lobby",
+
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Kembali ke Lobby",
+        },
       },
     ],
   },
@@ -137,7 +181,7 @@ const scenes = {
 
     type: "equirectangular",
 
-    panorama: "/assets/360/auditorium/panorama.jpg",
+    panorama: "./assets/360/auditorium/panorama.jpg",
 
     pitch: 0,
 
@@ -148,6 +192,7 @@ const scenes = {
     hotSpots: [
       {
         pitch: -5,
+
         yaw: 180,
 
         type: "scene",
@@ -155,6 +200,14 @@ const scenes = {
         text: "Laboratorium",
 
         sceneId: "laboratory",
+
+        cssClass: "campus-navigation-hotspot",
+
+        createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          text: "Laboratorium",
+        },
       },
     ],
   },
@@ -173,10 +226,10 @@ const viewer = pannellum.viewer("panorama", {
     autoRotate: false,
 
     showControls: true,
-    //hospost debug nya
-    hotSpotDebug: true,
 
     compass: true,
+
+    hotSpotDebug: true,
   },
 
   scenes,
@@ -185,11 +238,15 @@ const viewer = pannellum.viewer("panorama", {
 // DEBUG
 
 viewer.on("load", () => {
-  console.log("Panorama berhasil dimuat");
+  console.log("✅ Panorama berhasil dimuat");
 
   console.log("Scene:", viewer.getScene());
 });
 
+viewer.on("scenechange", (sceneId) => {
+  console.log("Scene berubah:", sceneId);
+});
+
 viewer.on("error", (error) => {
-  console.error("Pannellum error:", error);
+  console.error("❌ Pannellum Error:", error);
 });
