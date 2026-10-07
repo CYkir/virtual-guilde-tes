@@ -1,12 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Virtual Guide 360</title>
 
@@ -18,10 +15,7 @@
       type="text/css"
     />
 
-    <link
-      rel="stylesheet"
-      href="./public/pannellum/pannellum.css"
-    />
+    <link rel="stylesheet" href="./public/pannellum/pannellum.css" />
 
     <style>
       .campus-navigation-hotspot {
@@ -64,58 +58,33 @@
   </head>
 
   <body class="bg-base-200">
-
     <main>
       <section class="py-12 sm:py-16 lg:py-20">
-
-        <div
-          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-        >
-
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="mb-6 max-w-2xl">
+            <div class="badge badge-primary mb-3">Virtual Guide 360</div>
 
-            <div class="badge badge-primary mb-3">
-              Virtual Guide 360
-            </div>
+            <h1 class="text-3xl font-bold sm:text-4xl">Jelajahi Kampus Saya</h1>
 
-            <h1
-              class="text-3xl font-bold sm:text-4xl"
-            >
-              Jelajahi Kampus Saya
-            </h1>
-
-            <p
-              class="mt-2 text-base-content/70"
-            >
-              Jelajahi lingkungan kampus melalui
-              panorama 360 derajat secara interaktif.
+            <p class="mt-2 text-base-content/70">
+              Jelajahi lingkungan kampus melalui panorama 360 derajat secara
+              interaktif.
             </p>
-
           </div>
           <div
-            class="overflow-hidden rounded-2xl
-                   border border-base-300
-                   bg-base-100 shadow-xl"
+            class="overflow-hidden rounded-2xl border border-base-300 bg-base-100 shadow-xl"
           >
-
             <div
               id="panorama"
-              class="h-[400px] w-full
-                     sm:h-[500px]
-                     lg:h-[600px]"
+              class="h-[400px] w-full sm:h-[500px] lg:h-[600px]"
             ></div>
-
           </div>
-
         </div>
-
       </section>
     </main>
-
 
     <script src="./public/pannellum/pannellum.js"></script>
 
     <script src="./js/virtual-guide.js"></script>
-
   </body>
 </html>

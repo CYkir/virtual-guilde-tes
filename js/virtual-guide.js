@@ -14,7 +14,7 @@ const scenes = {
   // LOBBY
 
   halaman: {
-    title: "halaman Depan",
+    // title: "halaman Depan",
 
     author: "Virtual Guide",
 
@@ -30,12 +30,12 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: 11.48989556487606,
-        yaw: -16.995300920041956,
+        pitch: -5.207806885444995,
+        yaw: 45.580173923607475,
 
         type: "scene",
 
-        text: "Lobby",
+        // text: "Kelas",
 
         sceneId: "lobi",
 
@@ -44,7 +44,26 @@ const scenes = {
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Laboratorium Komputer",
+          // text: "Laboratorium Komputer",
+        },
+      },
+
+      {
+        pitch: -6.883940616930251,
+        yaw: -31.689857759167637,
+
+        type: "scene",
+
+        // text: "Kelas",
+
+        sceneId: "belakang",
+
+        // cssClass: "campus-navigation-hotspot",
+
+        // createTooltipFunc: createNavigationHotspot,
+
+        createTooltipArgs: {
+          // text: "Laboratorium Komputer",
         },
       },
     ],
@@ -53,13 +72,13 @@ const scenes = {
   // LABORATORY
 
   lobi: {
-    title: "Lobi Mall",
+    // title: "Lobi Mall",
 
     author: "Virtual Guide",
 
     type: "equirectangular",
 
-    panorama: "./assets/360/lobby/panorama.jpg",
+    panorama: "./assets/360/lobby/panorama.jpeg",
 
     pitch: 0,
 
@@ -69,13 +88,13 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: 19.964816817651034,
+        pitch: -14.600626951848493,
 
-        yaw: 62.302991360436074,
+        yaw: 162.48575232796708,
 
         type: "scene",
 
-        text: "Keluar ke Halaman",
+        // text: "Keluar ke Halaman",
 
         sceneId: "halaman",
 
@@ -84,47 +103,7 @@ const scenes = {
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Keluar ke Halaman",
-        },
-      },
-
-      {
-        pitch: 16.3510905085903,
-
-        yaw: 140.46785815145353,
-
-        type: "scene",
-
-        text: "Masuk Kampus",
-
-        sceneId: "masuk",
-
-        // cssClass: "campus-navigation-hotspot",
-
-        // createTooltipFunc: createNavigationHotspot,
-
-        createTooltipArgs: {
-          text: "Masuk Kampus",
-        },
-      },
-
-      {
-        pitch: 5.28048741746657,
-
-        yaw: -120.28314240407715,
-
-        type: "scene",
-
-        text: "Belakang",
-
-        sceneId: "belakang",
-
-        // cssClass: "campus-navigation-hotspot",
-
-        // createTooltipFunc: createNavigationHotspot,
-
-        createTooltipArgs: {
-          text: "Belakang",
+          // text: "Keluar ke Halaman",
         },
       },
     ],
@@ -164,7 +143,7 @@ const scenes = {
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Kembali ke Lobby",
+          // text: "Kembali ke Lobby",
         },
       },
     ],
@@ -173,13 +152,13 @@ const scenes = {
   // AUDITORIUM
 
   belakang: {
-    title: "belakang",
+    // title: "belakang",
 
     author: "Virtual Guide",
 
     type: "equirectangular",
 
-    panorama: "./assets/360/belakang/panorama.jpg",
+    panorama: "./assets/360/belakang/panorama.jpeg",
 
     pitch: 0,
 
@@ -189,22 +168,22 @@ const scenes = {
 
     hotSpots: [
       {
-        pitch: 17.118556009882905,
+        pitch: -11.336833453831881,
 
-        yaw: 73.67051933243152,
+        yaw: -118.55521803995978,
 
         type: "scene",
 
-        text: "Kembali ke Lobby",
+        // text: "Kembali ke Lobby",
 
-        sceneId: "lobby",
+        sceneId: "halaman",
 
         // cssClass: "campus-navigation-hotspot",
 
         // createTooltipFunc: createNavigationHotspot,
 
         createTooltipArgs: {
-          text: "Kembali ke Lobby",
+          // text: "Kembali ke Lobby",
         },
       },
     ],
@@ -227,7 +206,7 @@ const viewer = pannellum.viewer("panorama", {
 
     compass: true,
 
-    hotSpotDebug: true,
+    // hotSpotDebug: true,
   },
 
   scenes,
